@@ -6,4 +6,7 @@ Other topics include debugging applications, container technology, configuration
 ### Parts and completion
 Full Stack studies consist of the core course and multiple extensions. You can complete the studies in the extent of 5 to 14 credits.
 
-Parts 0-5 (core course) - Full Stack Web Development
+#### Parts 0-5 (core course) - Full Stack Web Development
+#### Part 6 - Full Stack Web Development, extension 1 
+#### Part 7 - Full Stack Web Development, extension 2
+#### Part 8 - Full Stack Web Development: GraphQL 
