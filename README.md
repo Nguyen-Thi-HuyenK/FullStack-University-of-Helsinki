@@ -10,3 +10,5 @@ Full Stack studies consist of the core course and multiple extensions. You can c
 #### Part 6 - Full Stack Web Development, extension 1 
 #### Part 7 - Full Stack Web Development, extension 2
 #### Part 8 - Full Stack Web Development: GraphQL 
+#### Part 9 - Full Stack Web Development: TypeScript 
+#### Part 10 - Full Stack Web Development: React Native 
