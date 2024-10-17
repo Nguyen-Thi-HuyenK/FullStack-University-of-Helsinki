@@ -1,5 +1,10 @@
 import { useState } from 'react'
 const App = () => {
+  // Helper function to initialize an array of zeroes
+  const initArray0 = (length) => {
+    return Array(length).fill(0)
+  }
+
   const anecdotes = [
     'If it hurts, do it more often.',
     'Adding manpower to a late software project makes it later!',
@@ -12,16 +17,48 @@ const App = () => {
   ]
    
   const [selected, setSelected] = useState(0)
+  const [votes, setVotes] = useState(initArray0(anecdotes.length))
 
   // create a random number between 0 and the length of the anecdotes array
   const randomAnecdote = () => {
     setSelected(Math.floor(Math.random() * anecdotes.length))
   }
 
+  
+
+  //count the vote
+  const vote = () => {
+    const copy = [...votes]
+    copy[selected] += 1
+    setVotes(copy)
+  }
+
+  // find the index of the anecdote with the most votes
+  const getAnecdoteWithMostVotes = () => {
+    const maxVotes = Math.max(...votes)  // Get the maximum number of votes
+    const mostVotedIndex = votes.indexOf(maxVotes)  // Find the index of the anecdote with the most votes
+    return mostVotedIndex
+  }
+
+  const mostVotedIndex = getAnecdoteWithMostVotes()
+
+
   return (
     <div>
+      <h1>Anecdote of the day</h1>
       <p>{anecdotes[selected]}</p>
+      <p>Has {votes[selected]} votes</p>
+      <button onClick = {vote}>Vote</button>
       <button onClick={randomAnecdote}>Next anecdote</button>
+      <h1>Anecdote with most votes</h1>
+      {votes[mostVotedIndex] > 0 ? (
+        <div>
+          <p>{anecdotes[mostVotedIndex]}</p>
+          <p>Has {votes[mostVotedIndex]} votes</p>
+        </div>
+      ) : (
+        <p>No votes yet</p>
+      )}
     </div>
   )
 }
