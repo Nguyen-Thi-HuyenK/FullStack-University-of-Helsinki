@@ -16,3 +16,5 @@ Full Stack studies consist of the core course and multiple extensions. You can c
 #### Part 11 - Full Stack Web Development: Continuous Integration / Continuous Delivery 
 #### Part 12 - Full Stack Web Development: Containers 
 #### Part 13 - Full Stack Web Development: Relational databases
+
+npm create vite@latest . -- --template react
