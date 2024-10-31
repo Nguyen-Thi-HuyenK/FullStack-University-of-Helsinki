@@ -1,9 +1,15 @@
 import Person from './Person';
 
-const PeopleList = ({ searchResults }) => {
+const PeopleList = ({ searchResults, deletePerson}) => {
     return (
         <ul style={{listStyleType: 'none'}}>
-            {searchResults.map(person => <Person key={person.name} person={person} />)}
+            {searchResults.map(person => (
+                <Person
+                    key={person.id}
+                    person={person}
+                    deletePerson={deletePerson}
+                />
+            ))}
         </ul>
     )
 }
